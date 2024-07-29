@@ -48,7 +48,7 @@ if ($result[0]["step"] == 0 || empty($result)) {
     } catch (PDOException $e) {
         echo $sql . "<br>" . $e->getMessage();
     }
-    $msg = " سلام آقای  " . $first_name . $last_name . " به ربات خودتون خوش آمدید. ";
+    $msg = " سلام آقا / خانم  " . $first_name . $last_name . " به ربات خودتون خوش آمدید. ";
     $msg .= "\n\n  لطفا عدد اول را وارد کنید:";
     $data = array(
         "chat_id" => $chat_id,
@@ -115,7 +115,7 @@ if ($result[0]["step"] == 0 || empty($result)) {
             $answer = $first_number % $second_number;
             break;
         default:
-            $answer = "لطفا عمگر را درست انتخاب کنید";
+            $answer = "!!!----->  عملگر نادرست";
             break;
     }
     $msg = $first_number . " " . $text . " " . $second_number . " = " . $answer;
